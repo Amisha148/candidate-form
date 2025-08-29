@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Candidate Registration Form</title>
+</head>
+<body>
+    <!--search-->
+   <h3>search option</h3>
+   <input type="Search " placeholder="enter name or email">
+   <button type="button">Search ch</button>
+  
+  <h2>Candidate Registration Form</h2>
+
+  <form>
+    <!-- Full Name -->
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required="">
+    <br><br>
+
+    <!-- Date of Birth -->
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required="">
+    <br><br>
+
+    <!-- Contact Number -->
+    <label for="contact">Contact Number:</label><br>
+    <input type="tel" id="contact" name="contact" placeholder="10-digit number" pattern="[0-9]{10}" required="">
+    <br><br>
+
+    <!-- Email -->
+    <label for="email">Email ID:</label><br>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required="">
+    <br><br>
+
+    <!-- Qualification -->
+    <label for="qualification">Educational Qualification:</label><br>
+    <select id="qualification" name="qualification" required="">
+      <option value="">--Select--</option>
+      <option value="highschool">High School</option>
+      <option value="graduate">Graduate</option>
+      <option value="postgraduate">Post Graduate</option>
+      <option value="other">Other</option>
+    </select>
+    <br><br>
+
+    <!-- Submit -->
+    <button type="submit">Submit</button>
+  </form>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
